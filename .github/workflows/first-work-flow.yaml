@@ -24,4 +24,4 @@ jobs:
             - name: echo a string
               run: Write-Host "Windows"
             - name: Error Step
-              run: doesnotexists
+              run: doesnotexist
