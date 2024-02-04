@@ -1,0 +1,12 @@
+name: Workflow Run
+on:
+    workflow_run:
+        workflows: [Repository Events]
+        types: [completed]
+
+jobs:
+    echo-string:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Echo string
+              run: echo "Trigged by ${{ github.event.workflow_run.event }} event and Repository Events workflow."
