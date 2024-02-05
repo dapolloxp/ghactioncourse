@@ -11,8 +11,8 @@ on:
         #tags:
         #    - v1.* # matches v1.0, v1.1, v1.2, does not match v2.0
         #    - "!v1.1.1" # ignore v1.0
-        paths:
-            - "**.js" # matches all .js files
+       # paths:
+      #      - "**.js" # matches all .js files
          #   - "!app.js" # ignore app.js
     pull_request: # runs when main branch and js files
         types: [opened, assigned, reopened, synchronize]
