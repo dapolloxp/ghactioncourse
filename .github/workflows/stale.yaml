@@ -1,7 +1,7 @@
 name: Stale Issues & PR
 on:
   schedule:
-    - cron: '*/5 * * * *' # just for testing
+    - cron: '0 * 15 * *' # just for testing
 
 jobs:
     stale: 
