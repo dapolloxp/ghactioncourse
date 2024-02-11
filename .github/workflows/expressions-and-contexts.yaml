@@ -15,7 +15,7 @@ jobs:
           echo ${{ 1 > 2 }}
           echo ${{ 'string' == 'String' }}
           echo ${{ true && false }}
-          echo ${{ true || (false && true }}
+          echo ${{ true || (false && true) }}
       - name: Dump Contexts
         id: dump-contexts
         run: |
