@@ -27,7 +27,7 @@ jobs:
       uses: 'google-github-actions/setup-gcloud@v2'
 
     - name: 'Use gcloud CLI'
-      run: 'gcloud info'
+      run: 'gcloud auth print-access-token'
       
     - id: 'gcloud'
       name: 'gcloud'
