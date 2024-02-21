@@ -20,7 +20,7 @@ jobs:
       uses: 'google-github-actions/auth@v2'
       with:
           create_credentials_file: true
-          workload_identity_provider: 'projects/gke07262023/locations/global/workloadIdentityPools/ghactions/providers/my-repo'
+          workload_identity_provider: 'https://iam.googleapis.com/projects/57038048924/locations/global/workloadIdentityPools/github/providers/my-repo'
           service_account: 'github-actions-svc-account@gke07262023.iam.gserviceaccount.com'
     - id: 'gcloud'
       name: 'gcloud'
