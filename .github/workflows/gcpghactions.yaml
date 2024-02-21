@@ -33,4 +33,4 @@ jobs:
         cat ${{ steps.auth.outputs.credentials_file_path }}
         echo  ${{ steps.auth.outputs.access_token }}
         gcloud auth login --cred-file="${{ steps.auth.outputs.credentials_file_path }}"
-        gcloud services list
+        gcloud info
