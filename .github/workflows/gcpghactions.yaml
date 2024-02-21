@@ -28,6 +28,7 @@ jobs:
 
     - name: 'Use gcloud CLI'
       run: 'gcloud info'
+      
     - id: 'gcloud'
       name: 'gcloud'
       run: |-
@@ -36,4 +37,4 @@ jobs:
         cat ${{ steps.auth.outputs.credentials_file_path }}
         echo  ${{ steps.auth.outputs.access_token }}
         gcloud auth login --cred-file="${{ steps.auth.outputs.credentials_file_path }}"
-        gcloud info
+        gcloud services list
