@@ -19,6 +19,7 @@ jobs:
       name: 'Authenticate to GCP'
       uses: 'google-github-actions/auth@v2'
       with:
+          token_format: 'access_token'
           project_id: 'gke07262023'
           create_credentials_file: true
           workload_identity_provider: 'projects/57038048924/locations/global/workloadIdentityPools/github/providers/ghactionscourse'
@@ -27,6 +28,7 @@ jobs:
     - id: 'gcloud'
       name: 'gcloud'
       run: |-
+        echo ${{ steps.auth.outputs.access_token }}
         echo ${{ steps.auth.outputs.credentials_file_path}}
         cat ${{ steps.auth.outputs.credentials_file_path }}
         echo  ${{ steps.auth.outputs.access_token }}
