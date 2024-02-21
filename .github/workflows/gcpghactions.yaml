@@ -23,7 +23,11 @@ jobs:
           create_credentials_file: true
           workload_identity_provider: 'projects/57038048924/locations/global/workloadIdentityPools/github/providers/ghactionscourse'
           service_account: 'github-actions-svc-account@gke07262023.iam.gserviceaccount.com'
-         
+    - name: 'Set up Cloud SDK'
+      uses: 'google-github-actions/setup-gcloud@v2'
+
+    - name: 'Use gcloud CLI'
+      run: 'gcloud info'
     - id: 'gcloud'
       name: 'gcloud'
       run: |-
