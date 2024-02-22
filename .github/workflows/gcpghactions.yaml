@@ -51,7 +51,7 @@ jobs:
       name: 'gcloud'
       run: |-
         echo $ACTIONS_ID_TOKEN_REQUEST_TOKEN
-        #echo ${{ steps.auth.outputs.access_token }}
+        echo ${{ steps.auth.outputs.access_token }}
         #echo ${{ steps.auth.outputs.credentials_file_path}}
         #cat ${{ steps.auth.outputs.credentials_file_path }}
         #echo  ${{ steps.auth.outputs.access_token }}
