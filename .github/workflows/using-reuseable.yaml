@@ -1,0 +1,16 @@
+name: Calling reusable Workflows
+on:
+    workflow_dispatch:
+        inputs:
+            name:
+                description: 'Name of the workflow to run'
+                required: true
+                default: 'David calling from $$ {{ github.event.inputs.name }} $$'
+                type: string
+jobs:
+    calling-a-reusable-workflow:
+        uses: dapolloxp/reuseable/.github/workflows/reusable.yaml@main
+        with:
+            name: ${{ github.event.inputs.name }}
+        secrets: # inherit secrets from the calling workflow
+            access-token: ${{ secrets.ACCESS_TOKEN }}
