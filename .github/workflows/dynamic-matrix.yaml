@@ -20,7 +20,7 @@ jobs:
     outputs:
       matrix-arrays: ${{ steps.matrix-arrays.outputs.result }} # makes job output available to other jobs
     steps:
-      - uses: actions/github-script@v6
+      - uses: actions/github-script@v7
         id: matrix-arrays
         with:
           script: "return { os: context.payload.inputs['os'].split(','),'node-version': context.payload.inputs['node-version'].split(',')}"
