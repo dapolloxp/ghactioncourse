@@ -30,7 +30,7 @@ jobs:
     - id: 'echo'
       name: 'echo values'
       run: |-
-        echo ${GITHUB_ORG}
+        echo ${GITHUB_ORG} gh
     - uses: actions/checkout@v3
     
     - id: 'auth'
