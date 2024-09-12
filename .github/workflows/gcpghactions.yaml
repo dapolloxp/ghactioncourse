@@ -28,7 +28,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - id: 'echo'
-      name: 'echo values'
+      name: 'echo values and token'
       run: |-
         echo ${GITHUB_ORG}
     - uses: actions/checkout@v3
