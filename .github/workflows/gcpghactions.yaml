@@ -20,10 +20,10 @@ jobs:
           ref: main
           token: ${{ secrets.GITHUB_TOKEN }}
           path: ./.github/actions/actions-oidc-debugger
-#      - name: Debug OIDC Claims
- #       uses: ./.github/actions/actions-oidc-debugger
-  #      with:
-   #       audience: 'https://github.com/github'
+      - name: Debug OIDC Claims
+        uses: ./.github/actions/actions-oidc-debugger
+        with:
+          audience: '${{ github.server_url }}/${{ github.repository_owner }}'
   Get_OIDC_ID_token:
     runs-on: ubuntu-latest
     steps:
